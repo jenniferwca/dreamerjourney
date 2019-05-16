@@ -1,0 +1,111 @@
+.loginr_page{
+    margin:0;
+    background: linear-gradient(120deg,	#191970,black);
+    background-size: 200% 400%;
+    animation: bgchange 4s ease infinite;
+}
+/* background animation */
+@keyframes bgchange {
+    0%{
+        background-position: 100% 50%;
+    }
+    50%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
+
+.loginr_page h1{
+    font-family: 'Codystar', cursive;
+    font-size:45px;
+    letter-spacing:10px;
+    color:white;
+    text-align: center;
+    margin:6%;
+}
+.loginr_container{
+    font-family: 'Dosis', sans-serif;
+}
+.prim, .second{
+    text-align: center;
+    margin:0 15%;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.prim{
+    color: #0d0d3d;
+}
+.second{
+    background-color: rgb(196, 196, 196);
+    padding:2% 4%;
+    color: rgb(112, 112, 112);
+}
+.second:hover{
+    background-color: #0d0d3d;
+    color:white;
+}
+
+.input_form{
+    background-color: #DCDCDC;
+    width:35%;
+    min-height: 30%;
+    margin:0 auto;
+    padding: 1.5%;
+    animation: shift 1s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes shift {
+    0%{
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        transform: translate(0);
+    }
+}
+input[type=text],input[type=password], select {
+    width: 100%;
+    padding: 7px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #D0D0D0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #0d0d3d;
+    color: white;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Codystar', cursive;
+}
+input[type=submit]:hover{
+    background-color: rgb(112, 112, 112);
+}
+.message{
+   text-align: center;
+   color: #171766;
+}
+
+/* footer */
+.footer{
+    bottom:0;
+    right:0;
+    position: fixed;
+}
+.footer p{
+    font-family: 'Dosis', sans-serif;
+    margin:0;
+    padding:5px;
+    color:#696969;
+    font-size: 12px;
+}

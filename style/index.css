@@ -1,0 +1,83 @@
+.login_page{
+    margin:0;
+    background: linear-gradient(120deg,	#191970,black);
+    background-size: 200% 400%;
+    animation: bgchange 4s ease infinite;
+}
+/* background animation */
+@keyframes bgchange {
+    0%{
+        background-position: 100% 50%;
+    }
+    50%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
+
+.login_header{
+    font-family: 'Codystar', cursive;
+    font-size:50px;
+    letter-spacing:10px;
+    color:white;
+    text-align: center;
+    margin-top:25%;
+}
+
+.login_tagline{
+    position: absolute;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    letter-spacing:1.5px;
+    color:#C0C0C0;
+    margin-left:33%;
+    animation: disappear 5s linear;
+    animation-fill-mode:forwards;
+    z-index:1;
+}
+/* text disappear animation */
+@keyframes disappear {
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.signin_container{
+    position: absolute;
+    margin-left:45%;
+    animation: showlink 7s linear;
+    z-index:2;
+}
+.signin_container a{
+    color:white;
+    font-family: 'Dosis', sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* login link showup animation */
+@keyframes showlink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+}

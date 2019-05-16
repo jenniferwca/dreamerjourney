@@ -1,0 +1,291 @@
+/* general & header */
+.index_page{
+    font-family: 'Dosis', sans-serif;
+    margin:0;
+    padding:0;
+    background-color: #202020;
+}
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    background: linear-gradient(120deg,	#191970,black);
+    padding: 38px;
+    font-size: 20px;
+}
+.header h1{
+    font-family: 'Codystar', cursive;
+    letter-spacing:10px;
+    color:white;
+    text-align: center;
+}
+.pwlogout{
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    padding:8px 1px;
+    float: right;
+}
+.pwlogout:hover{
+    border-top: 0.5px solid white;
+}
+
+/* layout */
+.container{
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.listblog{
+    order:1;
+    margin:0;
+    width:12%;
+    background-color:#202020;
+}
+.blog_input{
+    order:1;
+    margin:0;
+    width:38%;
+    background-color:#202020;
+}
+.nasa_container{
+    order:1;
+    margin:0;
+    width:50%;
+    background-color:#202020;
+    position: relative;
+    overflow: hidden;
+}
+
+/* listblog style */
+.listblog form{
+    margin:5px 0;
+}
+.listofblog{
+    text-decoration: none;
+    padding:5px 10px;
+    color:#D0D0D0;
+    display: block;
+}
+.listofblog:hover{
+    color:yellow;
+}
+.old_btn{
+    background-color: black;
+    border: none;
+    color: white;
+    width:100%;
+    padding: 8px 16px;
+    font-size:15px;
+    text-decoration: none;
+    margin:0;
+    cursor: pointer;
+    font-family: 'Codystar', cursive;
+    letter-spacing: 2px;
+}
+.old_btn:hover{
+    background-color: #484848;
+}
+
+/* blog_input style */
+.blog_input h3{
+    color:white;
+    margin: 18px 10px;
+    font-family: 'Codystar', cursive;
+}
+.input_title, .input_content{
+    width: 95%;
+    padding: 8px 16px;
+    margin: 10px 10px;;
+    display: inline-block;
+    border: 1px solid 	#484848;
+    box-sizing: border-box;
+    background-color:	#484848;
+    color: white;
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+}
+.input_content{
+    height:430px;
+}
+.save_btn{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size:15px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Codystar', cursive;
+    letter-spacing: 2px;
+    margin-left:78%;
+}
+.save_btn:hover{
+    background-color: #484848;
+}
+/* nasa section */
+.image_container{
+    width:100%;
+    height:500px;
+    overflow: hidden;
+    position: relative;
+    background-color:#202020;
+}
+.image_container img{
+    width:100%;
+    z-index: -1;
+}
+.learn_btn{
+    position: absolute; 
+    left:31px; 
+    top:0;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size:15px;
+    text-decoration: none;
+    margin:0;
+    cursor: pointer;
+    font-family: 'Codystar', cursive;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+.learn_btn:hover{
+    background-color: #484848;
+}
+.nasa_container .nasainfo {
+    position: absolute;
+    top:31px;
+    left:31px;
+    right:31px;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.nasa_container .nasainfo{
+    position: absolute;
+    padding:20px;
+    margin:0;
+    color:white;
+}
+
+
+/* -------------- details page style ----------------- */
+
+.detail_page,.edit_page{
+    font-family: 'Dosis', sans-serif;
+    margin:0;
+    padding:0;
+    background-color:#202020;
+}
+.detail_header, .edit_header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(120deg,	#191970,black);
+    padding: 20px;
+}
+
+/* header */
+.detail_title{
+    width:50%;
+    margin-left: 12%;
+}
+.detail_header h2{
+    font-family: 'Codystar', cursive;
+    color:white;
+    letter-spacing: 2px;
+    display: inline;
+    font-size: 40px;
+}
+form{
+    display: inline;
+}
+.edit_btn{
+    background: none;
+    border: none;
+    padding: 8px 1px;
+    text-decoration: none;
+    display: inline-block;
+    color:white;
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 80%;
+}
+.delete_btn{
+    background: none;
+    border: none;
+    padding: 8px 1px;
+    text-decoration: none;
+    display: inline-block;
+    color:white;
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 3%;
+}
+.detail_header a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    padding:8px 1px;
+    display: inline;
+    margin-left: 3%;
+}
+.edit_btn:hover,.delete_btn:hover,.detail_header a:hover{
+    border-top: 0.5px solid white;
+}
+.detail_content{
+    margin: 3% 12%;
+}
+.detail_content p{
+    padding:20px;
+    margin:0;
+    color:white;
+    font-size:18px;
+}
+
+/* -------------   edit page style    ------------------ */
+.edit_page{
+    background-color:#202020;
+}
+.edit_section{
+    background-color:#202020;
+    margin: 0 15%;
+    padding: 10px 0;
+}
+.edit_section p{
+    color:white;
+    padding:0;
+    margin:0 2.5%;
+}
+.edit_header h2{
+    font-family: 'Codystar', cursive;
+    color:white;
+    letter-spacing: 2px;
+    display: inline;
+    font-size: 40px;
+    margin-left:15%;
+}
+.edit_header a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    padding:8px 1px;
+    display: inline;
+    margin-left: 50%;
+}
+
+/* footer */
+.footer{
+    bottom:0;
+    right:0;
+    position: fixed;
+}
+.footer p{
+    margin:0;
+    padding:5px;
+    color:#696969;
+    font-size: 12px;
+}
