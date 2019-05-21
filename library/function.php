@@ -24,7 +24,6 @@ function validateForm($name,$email,$pass,$repass,$msg)
 
 function insertForm($name,$email,$pass,$msg)
 {
-    $connect = mysqli_connect("localhost","root","root","dreamerblog");
     $username = mysqli_real_escape_string($connect, $name);
     $useremail = mysqli_real_escape_string($connect, $email);
     $userpass = mysqli_real_escape_string($connect, $pass);
@@ -43,6 +42,7 @@ function validateLoginForm($email,$pass,$msg)
     if (empty($email) || empty($pass)) 
     {
         $msg .= "<b>* Please enter your email and password.</b><br/>";
+<<<<<<< HEAD
     } 
     else 
     {
@@ -51,6 +51,15 @@ function validateLoginForm($email,$pass,$msg)
         $results = $connect->query($sql);
         
         if($results->num_rows > 0)
+=======
+    } else {
+        $useremail = mysqli_real_escape_string($connect, $email);
+        $userpass = mysqli_real_escape_string($connect, $pass);
+        $userpass = md5($userpass);
+        $sql = "SELECT * FROM users WHERE email = '$useremail' AND pass = '$userpass'";
+        $result = mysqli_query($connect,$sql);
+        if(mysqli_num_rows($result) > 0)
+>>>>>>> b7014e36e3e8938346b3a4a22948b746a7a9040b
         {
             $data = $results->fetch_array();
             if(password_verify($pass,$data['pass']))
