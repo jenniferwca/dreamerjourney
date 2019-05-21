@@ -1,5 +1,5 @@
 <?php 
-require_once 'database.php';
+require_once 'library/database.php';
 require_once 'Blog.php';
 
 session_start();

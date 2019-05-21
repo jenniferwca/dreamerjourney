@@ -30,16 +30,17 @@
 }
 .prim, .second{
     text-align: center;
-    margin:0 15%;
+    margin:0 13%;
     letter-spacing: 1px;
     display: inline-block;
+    padding:2% 4%;
 }
 .prim{
-    color: #0d0d3d;
+    background-color: #0d0d3d;
+    color:white;
 }
 .second{
     background-color: rgb(196, 196, 196);
-    padding:2% 4%;
     color: rgb(112, 112, 112);
 }
 .second:hover{

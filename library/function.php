@@ -28,10 +28,11 @@ function insertForm($name,$email,$pass,$msg)
     $username = mysqli_real_escape_string($connect, $name);
     $useremail = mysqli_real_escape_string($connect, $email);
     $userpass = mysqli_real_escape_string($connect, $pass);
-    $userpass = md5($userpass);
+    $userpass = password_hash($pass, 1);
     $sql = "INSERT INTO users (name,email,pass) VALUES('$username','$useremail','$userpass')";
     if(mysqli_query($connect,$sql))
     {
+        $_SESSION['email'] = $email;
         header("location: blog_index.php");
     }
     return $msg;
@@ -39,21 +40,26 @@ function insertForm($name,$email,$pass,$msg)
 
 function validateLoginForm($email,$pass,$msg)
 {
-    if (empty($email) || empty($pass)) {
+    if (empty($email) || empty($pass)) 
+    {
         $msg .= "<b>* Please enter your email and password.</b><br/>";
-    } else {
+    } 
+    else 
+    {
         $connect = mysqli_connect("localhost","root","root","dreamerblog");
-        $useremail = mysqli_real_escape_string($connect, $email);
-        $userpass = mysqli_real_escape_string($connect, $pass);
-        $userpass = md5($userpass);
-        $sql = "SELECT * FROM users WHERE email = '$useremail' AND pass = '$userpass'";
-        $result = mysqli_query($connect,$sql);
-        if(mysqli_num_rows($result) > 0)
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $results = $connect->query($sql);
+        
+        if($results->num_rows > 0)
         {
-            $_SESSION['email'] = $email;
-            header("location: blog_index.php");
+            $data = $results->fetch_array();
+            if(password_verify($pass,$data['pass']))
+            {
+                $_SESSION['email'] = $email;
+                header("location: blog_index.php");
+            }
         } else {
-            $msg = "<b>* Inoccrect email and password.</b>";
+            $msg = "<b>* Incorrect email and password.</b>";
         }
     }
     return $msg;

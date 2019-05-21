@@ -1,5 +1,5 @@
 <?php
-require_once 'database.php';
+require_once 'library/database.php';
 session_start();
 
 if(!isset($_SESSION['email'])){
@@ -12,9 +12,11 @@ if(!isset($_SESSION['email'])){
   <head>
     <meta charset="utf-8" />
     <title>Dreamer's Journey</title>
+    <link rel="shortcut icon" href="style/dicon.png"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style/blog_index.css"/>
+    <link rel="stylesheet" type="text/css" href="style/no_ad.css"/>
     <link href="https://fonts.googleapis.com/css?family=Codystar|Dosis:300,400,600" rel="stylesheet">
 </head>
     <body class="index_page">

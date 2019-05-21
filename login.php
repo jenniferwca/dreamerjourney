@@ -12,10 +12,10 @@ session_start();
 
 if(isset($_POST["register"]))
 {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
-    $repass = $_POST['repass'];
+    $name = filter_input(INPUT_POST,'name');
+    $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL);
+    $pass = filter_input(INPUT_POST,'pass');
+    $repass = filter_input(INPUT_POST,'repass');
 
     $msg = validateForm($name,$email,$pass,$repass,$msg);
     if (empty($msg)){
@@ -24,8 +24,8 @@ if(isset($_POST["register"]))
 }
 if(isset($_POST["login"]))
 {
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
+    $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL);
+    $pass = filter_input(INPUT_POST,'pass');
 
     $msg = validateLoginForm($email,$pass,$msg);
     if (empty($msg)){
@@ -38,10 +38,12 @@ if(isset($_POST["login"]))
   <head>
     <meta charset="utf-8" />
     <title>Dreamer's Journey Signin/Register</title>
+    <link rel="shortcut icon" href="style/dicon.png"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Codystar|Dosis:300,400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style/login.css"/>
+    <link rel="stylesheet" type="text/css" href="style/no_ad.css"/>
   </head>
     <body class="loginr_page">
         <h1>Dreamer's Journey</h1>

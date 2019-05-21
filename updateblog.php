@@ -1,5 +1,5 @@
 <?php 
-require_once 'database.php';
+require_once 'library/database.php';
 require_once 'Blog.php';
 
 session_start();
@@ -32,9 +32,11 @@ if(isset($_POST['updblog'])){
   <head>
         <meta charset="utf-8" />
         <title>Dreamer's Journey</title>
+        <link rel="shortcut icon" href="style/dicon.png"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <link rel="stylesheet" type="text/css" href="style/blog_index.css"/>
+        <link rel="stylesheet" type="text/css" href="style/no_ad.css"/>
         <link href="https://fonts.googleapis.com/css?family=Codystar|Dosis:300,400,600" rel="stylesheet">
 </head>
 <body class="edit_page">
@@ -48,7 +50,7 @@ if(isset($_POST['updblog'])){
             <p>Title: </p>
             <input type="text" name="title" class="input_title" value="<?= $blog->title; ?>" /><br/>
             <p>Content: </p>
-            <input type="text" name="content" class="input_content" value="<?= $blog->content; ?>"/><br/>
+            <textarea type="text" name="content" class="input_content" value="<?= $blog->content; ?>"></textarea><br/>
             <button type="submit" name="updblog" value="UpdateBlog" class='save_btn'>Save</button>
         </form>
     </div>
