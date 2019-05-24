@@ -7,5 +7,3 @@ For dreamers to blog and be inspired by the great universe.
  * Date Created:    April 6th, 2019
  * Last Modified:   May 21th, 2019
  * Recent Changes:  Fixed login and push to GitHub
- * Last Modified:   May 14th, 2019
- * Recent Changes:  Fixed login and push to GitHub
